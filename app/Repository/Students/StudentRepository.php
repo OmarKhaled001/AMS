@@ -54,26 +54,25 @@ class StudentRepository implements StudentRepositoryInterface
         'email' => 'required|email',
         'password' => 'required',
 
-
     ]);
     DB::beginTransaction();
     try {
         // create grade by request
         $students = new Student();
-        $students-> name         =  ['en' => $request->name_en, 'ar' => $request->name];
-        $students-> phone        =  $request->phone;
-        $students-> email        =  $request->email;
-        $students-> password     =  Hash::make($request->password);
-        $students-> birthdate    =  $request->birthdate;
-        $students-> grade_id     =  $request->grade_id;
-        $students-> classroom_id =  $request->classroom_id;
-        $students-> section_id   =  $request->section_id;
-        $students-> parent_id    =  $request->parent_id;
-        $students-> gender       =  $request->gender;
-        $students-> nationality  =  $request->nationality;
-        $students-> religion     =  $request->religion;
-        $students-> blood_type   =  $request->blood_type;
-        $students-> status       =  1;
+        $students-> name           =  ['en' => $request->name_en, 'ar' => $request->name];
+        $students-> phone          =  $request->phone;
+        $students-> email          =  $request->email;
+        $students-> password       =  Hash::make($request->password);
+        $students-> birthdate      =  $request->birthdate;
+        $students-> grade_id       =  $request->grade_id;
+        $students-> classroom_id   =  $request->classroom_id;
+        $students-> section_id     =  $request->section_id;
+        $students-> parent_id      =  $request->parent_id;
+        $students-> gender         =  $request->gender;
+        $students-> nationality    =  $request->nationality;
+        $students-> religion       =  $request->religion;
+        $students-> blood_type     =  $request->blood_type;
+        $students-> academic_year  =  $request->academic_year;
         // save grade
         $students->save();
         DB::commit();
@@ -98,6 +97,13 @@ class StudentRepository implements StudentRepositoryInterface
 
     public function destroyStudent($id)
     {
-
+        // destory grade by id and alert
+        if(Student::destroy($id)){
+            Alert::success(trans('msg.success'), trans('msg.delete'));
+            return redirect()->back();
+        }else{
+            Alert::error(trans('msg.error'));
+            return redirect()->back();
+        }
     }
 }

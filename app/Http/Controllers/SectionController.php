@@ -26,7 +26,7 @@ class SectionController extends Controller
      */
     public function create()
     {
-        return  $this->Sections->allClassroom();
+        return  $this->Sections->allSectionByClassroom();
     }
 
     /**
@@ -48,9 +48,9 @@ class SectionController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Section $section)
+    public function edit()
     {
-        //
+        return  $this->Sections->allSectionByClassroom();
     }
 
     /**

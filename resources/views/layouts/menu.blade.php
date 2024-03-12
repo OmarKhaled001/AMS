@@ -40,7 +40,7 @@
         <li class=" nav-item"><a class="d-flex align-items-center" href="{{route("sections.index")}}"><i class="fa-solid fa-school"></i><span class="menu-title text-truncate" data-i18n="Sections">{{trans('menu.sections')}}</span></a></li>
         <li class="nav-item"><a class="d-flex align-items-center"  href="{{route("parents.add")}}" ><i class="fa-solid fa-house-user"></i><span class="menu-item text-truncate" data-i18n="Parents">{{trans('menu.parents')}}</span></a></li>
         <li class="nav-item"><a class="d-flex align-items-center"  href="{{route("teachers.index")}}" ><i class="fa-solid fa-chalkboard-user"></i><span class="menu-item text-truncate" data-i18n="Parents">{{trans('menu.teachers')}}</span></a></li>
-        <li class="nav-item"><a class="d-flex align-items-center"  href="{{route("students.index")}}" ><i class="fa-solid fa-users"></i><span class="menu-item text-truncate" data-i18n="Parents">{{trans('menu.Students')}}</span></a></li>
+        <li class="nav-item"><a class="d-flex align-items-center"  href="{{route("students.index")}}" ><i class="fa-solid fa-users"></i><span class="menu-item text-truncate" data-i18n="Parents">{{trans('menu.students')}}</span></a></li>
       </ul>
     </div>
 </div>

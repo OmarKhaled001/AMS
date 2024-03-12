@@ -19,6 +19,15 @@ class ClassroomRepository implements ClassroomRepositoryInterface
         return view('pages.classrooms.all',compact(['classrooms','grades']));
     }
 
+    public function allClassroomByGrade()
+    {
+        $classrooms = Classroom::whereHas('grade', function ($query) {
+            $query->whereId(request()->input('grade_id', 0));
+        })->pluck('name', 'id');
+        return response()->json($classrooms);
+    }
+
+
 
     public function createClassroom($request)
     { 
@@ -46,6 +55,7 @@ class ClassroomRepository implements ClassroomRepositoryInterface
             return redirect()->back()->withErrors(['error' => $e->getMessage()]);
         }
     }
+    
 
 
 

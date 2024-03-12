@@ -21,6 +21,12 @@ class ClassroomController extends Controller
         return  $this->Classrooms->allClassroom();
     }
     
+    // get all grades
+    public function create()
+    {
+        return  $this->Classrooms->allClassroomByGrade();
+    }
+    
 
     public function store(Request $request)
     {

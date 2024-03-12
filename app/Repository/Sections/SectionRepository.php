@@ -24,13 +24,13 @@ class SectionRepository implements SectionRepositoryInterface
         return view('pages.sections.all',compact('grades_list','classroom_list','grades','classrooms','teachers'));
     }
 
-    public function allClassroom()
-    {
-        $classrooms = Classroom::whereHas('grade', function ($query) {
-            $query->whereId(request()->input('grade_id', 0));
-        })->pluck('name', 'id');
 
-        return response()->json($classrooms);
+    public function allSectionByClassroom()
+    {
+        $sections = Section::whereHas('classroom', function ($query) {
+            $query->whereId(request()->input('classroom_id', 0));
+        })->pluck('name', 'id');
+        return response()->json($sections);
     }
 
 

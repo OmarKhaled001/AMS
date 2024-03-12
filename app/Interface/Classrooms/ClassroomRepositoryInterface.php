@@ -5,6 +5,9 @@ interface ClassroomRepositoryInterface
 {
     // get all grades
     public function allClassroom();
+
+    // get all grades
+    public function allClassroomByGrade();
     
     // add grades
     public function createClassroom($request);

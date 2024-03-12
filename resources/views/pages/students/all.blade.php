@@ -33,7 +33,7 @@
                                         <th>{{trans('students.name')}}</th>
                                         <th>{{trans('students.email')}}</th>
                                         <th>{{trans('students.phone')}}</th>
-                                        <th>{{trans('students.specializations')}}</th>
+                                        <th>{{trans('classrooms.name')}}</th>
                                         <th class="text-center">{{trans('public.actions')}}</th>
                                     </tr>
                                     </thead>
@@ -45,7 +45,7 @@
                                                 <td>{{$student->name}}</td>
                                                 <td>{{$student->email}}</td>
                                                 <td>{{$student->phone}}</td>
-                                                <td>{{$student->specialization->name}}</td>
+                                                <td>{{$student->classroom->name}}</td>
                                                 <td class="d-flex justify-content-center">
                                                     <div class="px-1"><a href="" data-bs-toggle="modal" data-bs-target="#editModal{{$student->id}}"><i class="fa-solid fa-pen-to-square text-success"></i></a></div>
                                                     <div class="px-1"><a href="" data-bs-toggle="modal" data-bs-target="#deleteModal{{$student->id}}"><i class="fa-solid fa-trash text-danger "></i></a></div>
@@ -56,7 +56,7 @@
                                         @endforeach
                                     @else
                                         <tr>
-                                            <th colspan="4" class="text-center text-danger">note found</th>
+                                            <th colspan="6" class="text-center text-danger">note found</th>
                                         </tr>
                                     @endif
                                     </tbody>

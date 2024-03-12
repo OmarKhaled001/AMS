@@ -6,8 +6,9 @@ interface SectionRepositoryInterface
     // get all Section
     public function allSection();
     
+    
     // get all Section
-    public function allClassroom();
+    public function allSectionByClassroom();
     
     // add Section
     public function createSection($request);
