@@ -58,7 +58,7 @@
                                             <select class="select2 form-select"  name="parent_id">
                                                 <option selected>{{trans('parents.choose')}}</option>
                                                 @foreach($parents as $parent)
-                                                    <option value="{{$parent->id}}">{{$parent->email}}</option>
+                                                    <option value="{{$parent->id}}">{{$parent->name_father}}</option>
                                                 @endforeach
                                             </select>
                                             @error('name') <p class="text-danger">{{$message}}</p> @enderror

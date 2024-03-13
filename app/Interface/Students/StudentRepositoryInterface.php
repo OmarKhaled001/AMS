@@ -9,6 +9,9 @@ interface StudentRepositoryInterface
     // get all Students
     public function addForm();
     
+    // get all Students
+    public function editForm($id);
+    
     // add Students
     public function createStudent($request);
     

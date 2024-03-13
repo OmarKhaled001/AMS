@@ -47,17 +47,17 @@ class StudentController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Student $student)
+    public function edit($id)
     {
-        //
+        return  $this->Students->editForm($id);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Student $student)
+    public function update(Request $request)
     {
-        //
+        return  $this->Students->updateStudent($request);
     }
 
     /**

@@ -42,16 +42,15 @@
                                         @foreach ($students as $student)
                                             <tr>
                                                 <td>{{$loop->iteration}}</td>
-                                                <td>{{$student->name}}</td>
+                                                <td>{{$student->name}} {{$student->parent->name_father}}</td>
                                                 <td>{{$student->email}}</td>
                                                 <td>{{$student->phone}}</td>
                                                 <td>{{$student->classroom->name}}</td>
                                                 <td class="d-flex justify-content-center">
-                                                    <div class="px-1"><a href="" data-bs-toggle="modal" data-bs-target="#editModal{{$student->id}}"><i class="fa-solid fa-pen-to-square text-success"></i></a></div>
+                                                    <div class="px-1"><a href="{{route('students.edit',$student->id)}}"><i class="fa-solid fa-pen-to-square text-success"></i></a></div>
                                                     <div class="px-1"><a href="" data-bs-toggle="modal" data-bs-target="#deleteModal{{$student->id}}"><i class="fa-solid fa-trash text-danger "></i></a></div>
                                                 </td>
                                             </tr>
-                                            @include('pages.students.edit')
                                             @include('pages.students.delete')
                                         @endforeach
                                     @else

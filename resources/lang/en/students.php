@@ -5,7 +5,7 @@ return [
     'name' => 'Student’s name',
     'lab_name' =>'Student’s Name (ar)',
     'lab_name_en' => 'Student’s Name',
-    'parent' => 'Parent’s email',
+    'parent' => 'Parent’s name',
     'birthdate' => 'Birth Date',
     'gender' => 'Gender',
     'male' => 'Male',
@@ -21,6 +21,7 @@ return [
     'grades' => 'Grades',
     'classrooms' => 'Classrooms',
     'add' => 'Add Student',
+    'edit' => 'Edit Student',
     'delete' => 'Delete Student',
     
 
