@@ -12,7 +12,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 |--------------------------------------------------------------------------
 |
 */
-
+ 
 Auth::routes();
 Route::group(
     [
@@ -34,5 +34,7 @@ Route::group(
         Route::resource('teachers', 'App\Http\Controllers\TeacherController');
         //Students Route
         Route::resource('students', 'App\Http\Controllers\StudentController');
+        //Promotions Route
+        Route::resource('promotions', 'App\Http\Controllers\PromotionController');
 
 });
