@@ -2,13 +2,17 @@
 
 namespace App\Models;
 
+use Spatie\Image\Enums\Fit;
+use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
+use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
-class Student extends Model
+class Student extends Model implements HasMedia
 {
-    use HasTranslations;
+    use HasTranslations , InteractsWithMedia;
 
     public $translatable =['name'];
 
@@ -60,6 +64,14 @@ class Student extends Model
 
     public function parent( ){
         return $this->belongsTo(StudentParent::class);
+    }
+
+    public function registerMediaConversions(Media $media = null): void
+    {
+        $this
+            ->addMediaConversion('preview')
+            ->fit(Fit::Contain, 50, 30)
+            ->nonQueued();
     }
 
 

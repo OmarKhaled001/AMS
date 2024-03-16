@@ -23,7 +23,7 @@
                     <div class="col-md-12 mb-30">
                         <div class="card card-statistics">
                             <div class="card-body">
-                                <form action="{{route('students.store')}}" method="post">
+                                <form action="{{route('students.store')}}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row mt-1">
                                         <div class="col">
@@ -147,6 +147,9 @@
                                             @error('section_id') <p class="text-danger">{{$message}}</p> @enderror
                                         </div>
 
+                                    </div>
+                                    <div class="row">
+                                        <input type="file" class="form-control" name="image">
                                     </div>
                                     <div class="form-group mt-1">
                                     </div>
