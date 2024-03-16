@@ -66,7 +66,7 @@ class StudentRepository implements StudentRepositoryInterface
     ]);
     DB::beginTransaction();
     try {
-        // create grade by request
+        // create student by request
         $student = new Student();
         $student-> name           =  ['en' => $request->name_en, 'ar' => $request->name];
         $student-> phone          =  $request->phone;
@@ -82,14 +82,14 @@ class StudentRepository implements StudentRepositoryInterface
         $student-> religion       =  $request->religion;
         $student-> blood_type     =  $request->blood_type;
         $student-> academic_year  =  $request->academic_year;
-        // save grade
+        // save student
         $student->save();
         // add images from request 
         if ($image = $request->image) {
             $student->addMedia($image)->toMediaCollection('students');
         }
         DB::commit();
-        // alert and redirect to grades table 
+        // alert and redirect to students table 
         Alert::success(trans('msg.success'), trans('msg.add'));
         return redirect()->route('students.index');
     }

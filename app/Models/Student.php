@@ -70,8 +70,9 @@ class Student extends Model implements HasMedia
     {
         $this
             ->addMediaConversion('preview')
-            ->fit(Fit::Contain, 50, 30)
-            ->nonQueued();
+            ->width(300)
+            ->height(200)
+            ->sharpen(10);
     }
 
 
