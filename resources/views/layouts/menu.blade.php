@@ -40,7 +40,18 @@
         <li class=" nav-item"><a class="d-flex align-items-center" href="{{route("sections.index")}}"><i class="fa-solid fa-school"></i><span class="menu-title text-truncate" data-i18n="Sections">{{trans('menu.sections')}}</span></a></li>
         <li class="nav-item"><a class="d-flex align-items-center"  href="{{route("parents.add")}}" ><i class="fa-solid fa-house-user"></i><span class="menu-item text-truncate" data-i18n="Parents">{{trans('menu.parents')}}</span></a></li>
         <li class="nav-item"><a class="d-flex align-items-center"  href="{{route("teachers.index")}}" ><i class="fa-solid fa-chalkboard-user"></i><span class="menu-item text-truncate" data-i18n="Parents">{{trans('menu.teachers')}}</span></a></li>
-        <li class="nav-item"><a class="d-flex align-items-center"  href="{{route("students.index")}}" ><i class="fa-solid fa-users"></i><span class="menu-item text-truncate" data-i18n="Parents">{{trans('menu.students')}}</span></a></li>
+        <li class="nav-item"><a class="d-flex align-items-center"  href="{{route("students.index")}}" ><i class="fa-solid fa-users"></i><span class="menu-item text-truncate" data-i18n="Parents">{{trans('menu.students')}}</span></a>
+          <ul class="menu-content">
+              <li><a class="d-flex align-items-center" href="{{route("students.index")}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Shop">{{trans('menu.list_students')}}</span></a>
+              </li>
+              <li><a class="d-flex align-items-center" href="{{route("students.create")}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Details">{{trans('menu.add_student')}}</span></a>
+              </li>
+              <li><a class="d-flex align-items-center" href="{{route("promotions.index")}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Wish List">{{trans('menu.list_promotions')}}</span></a>
+              </li>
+              <li><a class="d-flex align-items-center" href="{{route("promotions.create")}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Checkout">{{trans('menu.students_promotions')}}</span></a>
+              </li>
+          </ul>
+      </li>
       </ul>
     </div>
 </div>

@@ -4,15 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\Promotion;
 use Illuminate\Http\Request;
+use App\Interface\Students\StudentPromotionRepositoryInterface;
 
 class PromotionController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    protected $Promotions;
+
+    public function __construct(StudentPromotionRepositoryInterface $Promotions)
+    {
+        $this->Promotions = $Promotions;
+    }
+
     public function index()
     {
-        //
+        return  $this->Promotions->allPromotion();
     }
 
     /**
@@ -20,7 +25,7 @@ class PromotionController extends Controller
      */
     public function create()
     {
-        //
+        return  $this->Promotions->addForm();
     }
 
     /**

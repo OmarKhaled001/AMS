@@ -18,28 +18,34 @@ class StudentRepository implements StudentRepositoryInterface
 {
     public function allStudent()
     {
+        // get all students
         $students = Student::all();
+        // return view with data
         return view('pages.students.all',compact('students'));
     }
 
     public function addForm()
     {
+        // get data
         $nationalities = Nationality::all();
         $bloodTypes    = BloodType::all();
         $religions     = Religion::all();
         $parents       = StudentParent::all();
         $grades        = Grade::all();
+        // return view with data
         return view('pages.students.add',compact('grades','parents','nationalities','bloodTypes','religions'));
     }
 
     public function editForm($id)
     {
+        // get data
         $student       = Student::find($id);
         $grades        = Grade::all();
         $parents       = StudentParent::all();
         $religions     = Religion::all();
         $bloodTypes    = BloodType::all();
         $nationalities = Nationality::all();
+        // return view with data
         return view('pages.students.edit',compact('student','grades','parents','nationalities','bloodTypes','religions'));
     }
 

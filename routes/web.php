@@ -12,14 +12,14 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 |--------------------------------------------------------------------------
 |
 */
- 
+
 Auth::routes();
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath', 'auth']
     ], function () {
-
+        
         //Home Route
         Route::get('/', function () {return view('index'); })->name('home');
         //Grades Route

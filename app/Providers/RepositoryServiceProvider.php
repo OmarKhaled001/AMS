@@ -12,7 +12,9 @@ use App\Repository\Classrooms\ClassroomRepository;
 use App\Interface\Sections\SectionRepositoryInterface;
 use App\Interface\Students\StudentRepositoryInterface;
 use App\Interface\Teachers\TeacherRepositoryInterface;
+use App\Repository\Students\StudentPromotionRepository;
 use App\Interface\Classrooms\ClassroomRepositoryInterface;
+use App\Interface\Students\StudentPromotionRepositoryInterface;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -26,6 +28,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(SectionRepositoryInterface::class, SectionRepository::class);
         $this->app->bind(TeacherRepositoryInterface::class, TeacherRepository::class);
         $this->app->bind(StudentRepositoryInterface::class, StudentRepository::class);
+        $this->app->bind(StudentPromotionRepositoryInterface::class, StudentPromotionRepository::class);
     }
 
     /**

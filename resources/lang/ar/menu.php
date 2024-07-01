@@ -17,11 +17,11 @@ return [
     'list_students'=>'قائمة الطلاب',
     'add_student'=>'اضافة طالب جديد',
     'Student_information'=>'معلومات الطلاب',
+    'students_promotions'=>'ترقية الطلاب',
+    'list_promotions'=>'قائمة الترقيات',
 
     'List_sections'=>'قائمة الاقسام الدراسية',
-    'Students_Promotions'=>'ترقية الطلاب',
     'add_Promotion'=>'اضافة ترقية جديدة',
-    'list_Promotions'=>'قائمة الترقيات',
     'Graduate_students'=>'الطلاب المتخرجين',
     'add_Graduate'=>'اضافة تخرج جديد',
     'list_Graduate'=>'قائمة التخرجات',
