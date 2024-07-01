@@ -3,6 +3,11 @@
 return [
 
     'home' => 'الرئيسية',
+    'statistics' => 'الاحصائيات',
+    'count_students' => 'عدد الطلاب',
+    'last_students' => 'أحدث الطلاب',
+    'count_teachers' => 'عدد المعلمين',
+    'count_sections' => 'عدد الصفوف',
     'brand' => 'AMS',
     'change_language'=>'تغير اللغة',
     'grades'=>'المراحل الدراسية',

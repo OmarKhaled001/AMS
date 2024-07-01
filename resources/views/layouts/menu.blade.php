@@ -33,14 +33,14 @@
     <div class="shadow-bottom"></div>
     <div class="main-menu-content">
       <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-        <li class=" nav-item"><a class="d-flex align-items-center" href="{{route("home")}}"><i class="fa-solid fa-house"></i><span class="menu-title text-truncate" data-i18n="Home">{{trans('menu.home')}}</span></a></li>
+        <li class=" nav-item {{Request::url() == route('home')? 'active': ''}} "><a class="d-flex align-items-center" href="{{route("home")}}"><i class="fa-solid fa-house"></i><span class="menu-title text-truncate" data-i18n="Home">{{trans('menu.home')}}</span></a></li>
         <hr/>
-        <li class=" nav-item"><a class="d-flex align-items-center" href="{{route('grades.index')}}"><i class="fa-solid fa-shapes"></i><span class="menu-title text-truncate" data-i18n="Grades">{{trans('menu.grades')}}</span></a></li>
-        <li class=" nav-item"><a class="d-flex align-items-center" href="{{route("classrooms.index")}}"><i class="fa-brands fa-google-scholar"></i><span class="menu-title text-truncate" data-i18n="Classrooms">{{trans('menu.classes')}}</span></a></li>
-        <li class=" nav-item"><a class="d-flex align-items-center" href="{{route("sections.index")}}"><i class="fa-solid fa-school"></i><span class="menu-title text-truncate" data-i18n="Sections">{{trans('menu.sections')}}</span></a></li>
-        <li class="nav-item"><a class="d-flex align-items-center"  href="{{route("parents.add")}}" ><i class="fa-solid fa-house-user"></i><span class="menu-item text-truncate" data-i18n="Parents">{{trans('menu.parents')}}</span></a></li>
-        <li class="nav-item"><a class="d-flex align-items-center"  href="{{route("teachers.index")}}" ><i class="fa-solid fa-chalkboard-user"></i><span class="menu-item text-truncate" data-i18n="Parents">{{trans('menu.teachers')}}</span></a></li>
-        <li class="nav-item"><a class="d-flex align-items-center"  href="{{route("students.index")}}" ><i class="fa-solid fa-users"></i><span class="menu-item text-truncate" data-i18n="Parents">{{trans('menu.students')}}</span></a>
+        <li class=" nav-item {{Request::url() == route('grades.index')? 'active': ''}} "><a class="d-flex align-items-center" href="{{route('grades.index')}}"><i class="fa-solid fa-shapes"></i><span class="menu-title text-truncate" data-i18n="Grades">{{trans('menu.grades')}}</span></a></li>
+        <li class=" nav-item {{Request::url() == route('classrooms.index')? 'active': ''}} "><a class="d-flex align-items-center"href="{{route("classrooms.index")}}"><i class="fa-brands fa-google-scholar"></i><span class="menu-title text-truncate" data-i18n="Classrooms">{{trans('menu.classes')}}</span></a></li>
+        <li class=" nav-item {{Request::url() == route('sections.index')? 'active': ''}}"><a class="d-flex align-items-center" href="{{route("sections.index")}}"><i class="fa-solid fa-school"></i><span class="menu-title text-truncate" data-i18n="Sections">{{trans('menu.sections')}}</span></a></li>
+        <li class="nav-item  {{Request::url() == route('parents.add')? 'active': ''}}"><a class="d-flex align-items-center" href="{{route("parents.add")}}" ><i class="fa-solid fa-house-user"></i><span class="menu-item text-truncate" data-i18n="Parents">{{trans('menu.parents')}}</span></a></li>
+        <li class="nav-item  {{Request::url() == route('teachers.index')? 'active': ''}} "><a class="d-flex align-items-center"href="{{route("teachers.index")}}" ><i class="fa-solid fa-chalkboard-user"></i><span class="menu-item text-truncate" data-i18n="Parents">{{trans('menu.teachers')}}</span></a></li>
+        <li class="nav-item  {{Request::url() == route('students.index')? 'active': ''}}"><a class="d-flex align-items-center" href="{{route("students.index")}}" ><i class="fa-solid fa-users"></i><span class="menu-item text-truncate" data-i18n="Parents">{{trans('menu.students')}}</span></a>
           <ul class="menu-content">
               <li><a class="d-flex align-items-center" href="{{route("students.index")}}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Shop">{{trans('menu.list_students')}}</span></a>
               </li>

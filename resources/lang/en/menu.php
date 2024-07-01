@@ -4,6 +4,11 @@ return [
 
 
     'home' => 'Home',
+    'statistics' => 'Statistics',
+    'count_students' => 'Count Of Students',
+    'last_students'  => 'Last Students',
+    'count_teachers' => 'Count Of Teachers',
+    'count_sections' => 'Count Of Sections',
     'brand' => 'AMS',
     'grades'=>'Grades',
     'list'=>'View all',

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Livewire\AddParent;
 use Livewire\Livewire;
 use Illuminate\Support\Facades\Auth;
@@ -21,7 +22,7 @@ Route::group(
     ], function () {
         
         //Home Route
-        Route::get('/', function () {return view('index'); })->name('home');
+        Route::get('/',[HomeController::class,'index'] )->name('home');
         //Grades Route
         Route::resource('grades', 'App\Http\Controllers\GradeController');
         //Classrooms Route

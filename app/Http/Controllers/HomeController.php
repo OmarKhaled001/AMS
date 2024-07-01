@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Section;
+use App\Models\Student;
+use App\Models\Teacher;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $students =Student::count();
+        $teachers =Teacher::count();
+        $sections =Section::count();
+        $lastStudents = Student::orderBy("id", "DESC")->take(10)->get();;
+        return view('index',compact('students','teachers','sections','lastStudents'));
     }
 }

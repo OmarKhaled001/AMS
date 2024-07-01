@@ -2,6 +2,7 @@
 
 return [
 
+    'all' => 'All Students',
     'name' => 'Student’s name',
     'lab_name' =>'Student’s Name (ar)',
     'lab_name_en' => 'Student’s Name',
